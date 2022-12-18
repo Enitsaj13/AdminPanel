@@ -64,10 +64,16 @@ const CategoriesContent = () => {
         <div className={styles.categories__table}>
           <table>
             <thead>
-              {/* map the header */}
-              {TableHeader.map((header) => (
-                <th>{header}</th>
-              ))}
+              <tr>
+                <th>
+                  <input type='checkbox' className={styles.checkbox} />
+                </th>
+                <th>Image</th>
+                <th>Icon</th>
+                <th>Title</th>
+                <th>Order</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody>
               {TableData.map((data) => (
@@ -287,7 +293,5 @@ const TableData = [
   },
 ]
 
-// dummy data for the tr tag
-const TableHeader = ['', 'Icon', 'Cart Image', 'Title', 'Order', 'Actions']
 
 export default CategoriesContent

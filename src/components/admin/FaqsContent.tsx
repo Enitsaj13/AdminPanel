@@ -49,10 +49,15 @@ const DevicesContent = () => {
         <div className={styles.faqs__table}>
           <table>
             <thead>
-              {/* map the header */}
-              {TableHeader.map((header) => (
-                <th>{header}</th>
-              ))}
+              <tr>
+                <th>
+                  <input type='checkbox' className={styles.checkbox} />
+                </th>
+                <th>Title</th>
+                <th>Group</th>
+                <th>Order</th>
+                <th>Status</th>
+              </tr>
             </thead>
             <tbody>
               {TableData.map((data) => (
@@ -237,8 +242,5 @@ const TableData = [
     ),
   },
 ]
-
-// dummy data for the tr tag
-const TableHeader = ['', 'Title', 'Group', 'Order', 'Actions']
 
 export default DevicesContent

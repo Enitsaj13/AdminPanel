@@ -21,10 +21,12 @@ const BlogContent = () => {
         <div className={styles.staff__users__table}>
           <table>
             <thead>
-              {/* map the header */}
-              {TableHeader.map((header) => (
-                <th>{header}</th>
-              ))}
+              <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Group</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody>
               {TableData.map((data) => (
@@ -92,7 +94,5 @@ const TableData = [
   },
 ]
 
-// dummy data for the tr tag
-const TableHeader = ['Username', 'Email ', 'Group', 'Action']
 
 export default BlogContent

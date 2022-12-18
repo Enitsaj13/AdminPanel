@@ -33,10 +33,14 @@ const MenusContent = () => {
         <div className={styles.menus__table}>
           <table>
             <thead>
-              {/* map the header */}
-              {TableHeader.map((header) => (
-                <th>{header}</th>
-              ))}
+              <tr>
+                <th>ID</th>
+                <th>Menu Name</th>
+                <th>Parent Menu</th>
+                <th>Page Number</th>
+                <th>Order</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody>
               {TableData.map((data) => (
@@ -226,16 +230,6 @@ const TableData = [
       </>
     ),
   },
-]
-
-// dummy data for the tr tag
-const TableHeader = [
-  'No.',
-  'Menu Name',
-  'Parent Menu',
-  'Page Name',
-  'Order',
-  'Action',
 ]
 
 const SelectOptions = [

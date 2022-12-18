@@ -23,7 +23,15 @@ import nokia from '@/images/admin_images/nokia.png'
 import huawei from '@/images/admin_images/huawei.png'
 import lenovo from '@/images/admin_images/lenovo.png'
 
-const BrandContent = () => {
+interface BrancsProps {
+  id: number
+  title: string
+  order: number
+  actions: string
+
+}
+
+const BrandContent = ({ id, title, order, actions }: BrancsProps) => {
   return (
     <>
       <div className={styles.brands__content__container}>
@@ -64,10 +72,16 @@ const BrandContent = () => {
         <div className={styles.brands__table}>
           <table>
             <thead>
-              {/* map the header */}
-              {TableHeader.map((header) => (
-                <th>{header}</th>
-              ))}
+              <tr>
+                <th>
+                  <input type='checkbox' className={styles.checkbox} />
+                </th>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Order</th>
+                <th>Actions</th>
+              </tr>
+
             </thead>
             <tbody>
               {TableData.map((data) => (
@@ -274,7 +288,5 @@ const TableData = [
   },
 ]
 
-// dummy data for the tr tag
-const TableHeader = ['', 'Image', 'Title', 'Order', 'Actions']
 
 export default BrandContent

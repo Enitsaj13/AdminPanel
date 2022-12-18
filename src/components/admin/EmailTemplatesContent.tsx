@@ -35,10 +35,12 @@ const EmailTemplatesContent = () => {
         <div className={styles.email__templates__table}>
           <table>
             <thead>
-              {/* map the header */}
-              {TableHeader.map((header) => (
-                <th>{header}</th>
-              ))}
+              <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Subject</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody>
               {TableData.map((data) => (
@@ -195,8 +197,6 @@ const TableData = [
   },
 ]
 
-// dummy data for the tr tag
-const TableHeader = ['No.', 'Type', 'Subject', 'Action']
 
 const SelectOptions = [
   {

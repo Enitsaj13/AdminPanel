@@ -20,10 +20,14 @@ const PromoCodesContent = () => {
         <div className={styles.promo__codes__table}>
           <table>
             <thead>
-              {/* mapp the header */}
-              {TableHeader.map((header) => (
-                <th>{header}</th>
-              ))}
+              <tr>
+                <th>ID</th>
+                <th>Code</th>
+                <th>From Date</th>
+                <th>Expire Date</th>
+                <th>Discount</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody>
               {TableData.map((data) => (
@@ -205,14 +209,6 @@ const TableData = [
   },
 ]
 
-// dummy data for the tr tag
-const TableHeader = [
-  'ID',
-  'Promo Code',
-  'From Date',
-  'Expire Date',
-  'Discount',
-  'Action',
-]
+
 
 export default PromoCodesContent

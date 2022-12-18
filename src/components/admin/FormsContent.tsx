@@ -33,10 +33,19 @@ const FormsContent = () => {
         <div className={styles.forms__table}>
           <table>
             <thead>
-              {/* map the header */}
-              {TableHeader.map((header) => (
-                <th>{header}</th>
-              ))}
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Order</th>
+                <th>Item Name</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Form Type</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody>
               {TableData.map((data) => (
@@ -208,20 +217,7 @@ const TableData = [
   },
 ]
 
-// dummy data for the tr tag
-const TableHeader = [
-  '',
-  'Name',
-  'Phone',
-  'Email',
-  'Order No',
-  'Item Name',
-  'Subject',
-  'Message',
-  'Form Type',
-  'Date',
-  'Action',
-]
+
 
 const SelectOptions = [
   {
