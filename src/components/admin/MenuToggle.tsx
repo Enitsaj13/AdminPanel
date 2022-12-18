@@ -39,7 +39,7 @@ const MenuToggleList = [
   },
   {
     icon: <MdOutlineInventory2 />,
-    link: '/admin/products',
+    link: '/admin/inventory',
   },
   {
     icon: <HiOutlineTicket />,
