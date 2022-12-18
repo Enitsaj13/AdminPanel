@@ -23,15 +23,9 @@ import nokia from '@/images/admin_images/nokia.png'
 import huawei from '@/images/admin_images/huawei.png'
 import lenovo from '@/images/admin_images/lenovo.png'
 
-interface BrancsProps {
-  id: number
-  title: string
-  order: number
-  actions: string
 
-}
 
-const BrandContent = ({ id, title, order, actions }: BrancsProps) => {
+const BrandContent = () => {
   return (
     <>
       <div className={styles.brands__content__container}>
