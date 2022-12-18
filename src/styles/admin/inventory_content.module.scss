@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$input-font: 'Montserrat', sans-serif;
+$--hover: #f5f5f5;
+$--icon: #86838d;
+$--icon-hover: #454448;
+$--blue: #47b5ff;
+$--blue-hover: #33abfb;
+$--white: #fff;
+$--radius: 5px;
+$--violet: #80558c;
+$--violet-hover: #6a4a7a;
+$--pink: #f65a83;
+$--pink-hover: #e84a73;
+$--font-size: 13px;
+$--color: rgb(105, 100, 100);
+$--border-side: 1px solid rgba(0, 0, 0, 0.1);
+$--border: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+.inventory__content__container {
+  width: 95%;
+  margin: 110px 20px 100px 34px;
+  height: 60vh;
+  background-color: $--white;
+  box-shadow: $--border;
+
+  .inventory {
+    padding: 1px 0;
+
+    .inventory__btn {
+      margin-left: 22px;
+      position: relative;
+      top: 14px;
+    }
+
+    .inventory__stock__btn,
+    .inventory__ship__btn,
+    .inventory__sold__btn {
+      color: $--white;
+      border: none;
+      border-radius: $--radius;
+      font-size: $--font-size;
+      height: 38px;
+      width: 100px;
+      margin-left: 8px;
+      cursor: pointer;
+      font-family: $input-font;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      top: 1px;
+    }
+
+    .inventory__stock__btn {
+      text-decoration: underline;
+      background-color: $--pink;
+
+      &:hover {
+        background-color: $--pink-hover;
+      }
+    }
+
+    .inventory__ship__btn {
+      background-color: $--violet;
+      width: 120px;
+
+      &:hover {
+        background-color: $--violet-hover;
+      }
+    }
+
+    .inventory__sold__btn {
+      background-color: $--violet;
+
+      &:hover {
+        background-color: $--violet-hover;
+      }
+    }
+  }
+}
+
+.seperator {
+  border: 0;
+  border-top: $--border-side;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+}
+
+.inventory_search {
+  padding: 30px;
+
+  input {
+    width: 18%;
+    height: 38px;
+    border: $--border-side;
+    border-radius: $--radius;
+    padding: 0 10px;
+    font-size: $--font-size;
+    font-family: $input-font;
+    color: $--color;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $--blue;
+    }
+
+    &::placeholder {
+      color: rgb(166, 155, 155);
+      font-family: $input-font;
+    }
+  }
+
+  .search__icon {
+    position: relative;
+    inset: 4px 0 0 5px;
+  }
+
+  .inventory__search__btn,
+  .inventory__remove__btn {
+    background-color: $--blue;
+    color: $--white;
+    border: none;
+    border-radius: $--radius;
+    font-size: $--font-size;
+    height: 38px;
+    width: 90px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-family: $input-font;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      background-color: $--blue-hover;
+    }
+  }
+
+  .inventory__search__btn {
+    position: relative;
+    right: 40.8%;
+  }
+
+  .inventory__remove__btn {
+    width: 120px;
+    background-color: $--pink;
+    margin: 20px 0 0 0px;
+
+    &:hover {
+      background-color: $--pink-hover;
+    }
+
+    .remove__icon {
+      position: relative;
+      top: 3px;
+      right: 2px;
+    }
+  }
+}
+
+.inventory__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  select {
+    //   appearance: none;
+    width: 15%;
+    height: 38px;
+    border: $--border-side;
+    border-radius: $--radius;
+    padding: 0 10px;
+    font-size: $--font-size;
+    font-family: $input-font;
+    color: rgb(105, 100, 100);
+    cursor: inherit;
+    line-height: inherit;
+    margin-bottom: 20px;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $--blue;
+    }
+
+    &:nth-child(14) {
+      position: relative;
+      right: 13.4%;
+    }
+
+    &:nth-child(15) {
+      position: relative;
+      right: 26.8%;
+    }
+  }
+}
+
+.inventory__table {
+  width: 95%;
+  margin: 0 20px 0 34px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: $--border-side;
+
+    th {
+      font-size: $--font-size;
+      font-weight: 500;
+      color: $--color;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: $--border-side;
+      border-right: $--border-side;
+      padding-left: 20px;
+
+      // select child 1 and 5 and 6
+      &:nth-child(1) {
+        color: rgb(202, 195, 195);
+        width: 5%;
+      }
+      &:nth-child(2),
+      &:nth-child(6),
+      &:nth-child(7) {
+        color: $--blue;
+      }
+
+      .checkbox {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: $--white;
+        margin: 2px 0 0 0;
+        font: inherit;
+        color: currentColor;
+        width: 1.15em;
+        height: 1.15em;
+        border: 1px solid currentColor;
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+        display: grid;
+        place-content: center;
+      }
+
+      input[type='checkbox']::before {
+        content: '';
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: 0 0 0 0.15em currentColor;
+      }
+
+      input[type='checkbox']:checked::before {
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        transform: scale(1);
+      }
+
+      input[type='checkbox']:focus {
+        outline: max(2px, 0.15em) solid currentColor;
+        outline-offset: max(2px, 0.15em);
+      }
+
+      input[type='checkbox']:focus::before {
+        box-shadow: 0 0 0 0.15em currentColor,
+          0 0 0 calc(0.15em + 2px) currentColor;
+      }
+    }
+
+    td {
+      font-size: $--font-size;
+      font-weight: 500;
+      color: $--color;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: $--border-side;
+      border-right: $--border-side;
+      padding-left: 20px;
+    }
+
+    .table__icon {
+      color: $--icon;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $--icon-hover;
+      }
+    }
+  }
+}

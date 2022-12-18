@@ -1,0 +1,64 @@
+@use './fonts';
+@use './colors';
+@use './medias';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: fonts.$body-font;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: visible;
+  position: relative;
+
+  @media screen and (min-width: medias.$tablet) {
+    max-width: 800px;
+  }
+
+  @media screen and (min-width: medias.$laptop-sm) {
+    width: 90% !important;
+    max-width: 1024px;
+  }
+
+  @media screen and (min-width: medias.$laptop-l) {
+    width: 85% !important;
+    max-width: 1200px;
+  }
+
+  @media screen and (min-width: medias.$laptop-xl) {
+    width: 80% !important;
+    max-width: 1600px;
+  }
+}
+
+.scrolled {
+  :nth-child(8),
+  :nth-child(9),
+  :nth-child(10),
+  :nth-child(11) {
+    opacity: 1 !important;
+  }
+}

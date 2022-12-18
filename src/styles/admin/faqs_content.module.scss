@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$input-font: 'Montserrat';
+$--hover: #f5f5f5;
+$--icon: #86838d;
+$--icon-hover: #454448;
+$--blue: #47b5ff;
+$--blue-hover: #33abfb;
+$--white: #fff;
+$--radius: 5px;
+$--violet: #80558c;
+$--violet-hover: #6a4a7a;
+$--pink: #f65a83;
+$--pink-hover: #e84a73;
+$--hover_button: #e2e8f0;
+$--active: #abd9ff;
+$--active-text: #3a82ca;
+$--border: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+$--font-size: 13px;
+$--color: #6b7280;
+$--border-side: 0.5px solid #eaeaef;
+
+.header__faqs,
+.header__faqs__toggle {
+  height: 8vh;
+  background-color: $--white;
+  box-shadow: $--border;
+  width: 95%;
+  margin: 110px 20px 100px 34px;
+
+  span {
+    position: relative;
+    inset: 12px 0 0 20px;
+
+    .icon {
+      color: $--blue;
+    }
+  }
+
+  .header__text {
+    font-size: 14px;
+    color: $--color;
+    position: relative;
+    inset: 0 0 10px 40px;
+  }
+}
+
+.faqs__content__container {
+  width: 95%;
+  margin: -70px 20px 100px 34px;
+  height: 102vh;
+  background-color: $--white;
+  box-shadow: $--border;
+
+  .faqs {
+    padding: 20px 0;
+
+    .faqs__text {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $--color;
+      margin-left: 40px;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .faqs__add__btn {
+    margin: 0 0 0 40px;
+    background-color: $--violet;
+    color: $--white;
+    border: none;
+    border-radius: $--radius;
+    font-size: $--font-size;
+    height: 38px;
+    width: 110px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 70px;
+    top: 224px;
+    font-family: $input-font;
+
+    &:hover {
+      background-color: $--violet-hover;
+    }
+
+    .add__icon {
+      position: relative;
+      top: 2px;
+      margin-right: 2px;
+    }
+  }
+}
+
+.seperator {
+  border: 0;
+  border-top: 1px solid #eaeaef;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+}
+
+.faqs__remove__btn {
+  background-color: $--blue;
+  color: $--white;
+  border: none;
+  border-radius: $--radius;
+  font-size: $--font-size;
+  height: 38px;
+  width: 8%;
+  margin-left: 8px;
+  cursor: pointer;
+  font-family: $input-font;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $--blue-hover;
+  }
+}
+
+.faqs__remove__btn {
+  width: 120px;
+  background-color: $--pink;
+  margin: 20px 0 8px 34px;
+
+  &:hover {
+    background-color: $--pink-hover;
+  }
+
+  .remove__icon {
+    position: relative;
+    top: 3px;
+    right: 2px;
+  }
+}
+
+// checkbox
+.checkbox {
+  // style
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 1px solid #eaeaef;
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 10px;
+
+  &:checked {
+    background: $--blue;
+    border: 1px solid $--blue;
+  }
+
+  &:checked::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  // checkmark
+  &::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:checked::after {
+    opacity: 1;
+  }
+
+  // checkmark animation
+  &::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  // check inside the box  animation when checked
+  &:checked::after {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    border: 1px solid $--blue;
+  }
+
+  &:checked:hover {
+    border: 1px solid $--blue;
+  }
+}
+
+.faqs__table {
+  width: 95%;
+  margin: 0 20px 0 34px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: $--border-side;
+    margin-top: 10px;
+
+    th {
+      font-size: $--font-size;
+      font-weight: 500;
+      color: $--color;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: 1px solid #e1e8ed;
+      border-right: $--border-side;
+      padding-left: 20px;
+
+      &:first-child {
+        width: 5%;
+      }
+
+      &:nth-child(2) {
+        width: 40%;
+      }
+
+      &:nth-child(4) {
+        width: 10%;
+      }
+
+      &:last-child {
+        width: 20%;
+      }
+    }
+
+    td {
+      font-size: $--font-size;
+      color: $--color;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: $--border-side;
+      border-right: $--border-side;
+      padding-left: 20px;
+      height: 60px;
+    }
+
+    tr {
+      &:hover {
+        background-color: rgb(243, 246, 249);
+      }
+    }
+
+    .table__icon {
+      color: $--icon;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $--icon-hover;
+      }
+    }
+
+    .faqs__table__edit__btn {
+      border: none;
+      background-color: transparent;
+      position: relative;
+      top: 2px;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      border-radius: $--radius;
+      margin-left: 12px;
+
+      &:hover,
+      &.active {
+        background-color: $--hover_button;
+
+        .edit__icon {
+          color: $--color;
+        }
+      }
+
+      .edit__icon {
+        color: $--color;
+        cursor: pointer;
+      }
+
+      // // focus
+      // &:focus {
+      //   border: 2px solid $--blue;
+      // }
+    }
+  }
+
+  .status__btn {
+    background-color: $--active;
+    color: $--active-text;
+    border: none;
+    border-radius: $--radius;
+    font-size: $--font-size;
+    height: 24px;
+    width: 80px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: $input-font;
+  }
+}
+
+.faqs__order__field {
+  width: 80%;
+  height: 36px;
+  margin: auto;
+  border: 1px solid #eaeaef;
+  border-radius: $--radius;
+  font-size: $--font-size;
+  font-family: $input-font;
+  color: $--color;
+  padding: 0 15px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $--blue;
+  }
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}

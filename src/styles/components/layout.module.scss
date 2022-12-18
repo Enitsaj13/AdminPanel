@@ -1,0 +1,23 @@
+@use '@/styles/colors';
+
+.layout {
+    overflow: hidden;
+}
+
+.layout.dark {
+    background: colors.$dark-bg;
+}
+
+.layout.light {
+    background: colors.$white;
+}
+
+.auth_form {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

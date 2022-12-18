@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$input-font: 'Montserrat';
+$--hover: #f5f5f5;
+$--icon: #86838d;
+$--icon-hover: #454448;
+$--blue: #47b5ff;
+$--blue-hover: #33abfb;
+$--white: #fff;
+$--radius: 5px;
+$--violet: #80558c;
+$--violet-hover: #6a4a7a;
+$--pink: #f65a83;
+$--pink-hover: #e84a73;
+$--green: #809a6f;
+$--green-hover: #6a7f5a;
+$--active: #abd9ff;
+$--active-text: #3a82ca;
+$--border: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+$--font-size: 13px;
+$--color: rgb(105, 100, 100);
+$--border-side: 0.5px solid #eaeaef;
+
+.brands__content__container {
+  width: 95%;
+  margin: 110px 20px 100px 34px;
+  height: 136vh;
+  background-color: $--white;
+  box-shadow: $--border;
+
+  .brands {
+    padding: 20px 0;
+
+    .brands__text {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $--color;
+      margin-left: 40px;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .brands__add__btn {
+    margin: 0 0 0 40px;
+    background-color: $--violet;
+    color: $--white;
+    border: none;
+    border-radius: $--radius;
+    font-size: $--font-size;
+    height: 38px;
+    width: 110px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 70px;
+    top: 126px;
+    font-family: $input-font;
+
+    &:hover {
+      background-color: $--violet-hover;
+    }
+
+    .add__icon {
+      position: relative;
+      top: 2px;
+      margin-right: 2px;
+    }
+  }
+}
+
+.seperator {
+  border: 0;
+  border-top: 1px solid #eaeaef;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+}
+
+.search__icon {
+  position: relative;
+  inset: 4px 0 0 5px;
+}
+
+.brands__search {
+  margin: 0 0 20px 25px;
+}
+
+.brands__search__btn,
+.brands__remove__btn {
+  background-color: $--blue;
+  color: $--white;
+  border: none;
+  border-radius: $--radius;
+  font-size: $--font-size;
+  height: 38px;
+  width: 8%;
+  margin-left: 8px;
+  cursor: pointer;
+  font-family: $input-font;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $--blue-hover;
+  }
+}
+
+.brands__remove__btn {
+  width: 120px;
+  background-color: $--pink;
+  margin: 20px 0 0 9px;
+
+  &:hover {
+    background-color: $--pink-hover;
+  }
+
+  .remove__icon {
+    position: relative;
+    top: 3px;
+    right: 2px;
+  }
+}
+
+.search__field {
+  width: 18%;
+  height: 38px;
+  border: 1px solid #eaeaef;
+  border-radius: $--radius;
+  padding: 0 10px;
+  font-size: $--font-size;
+  font-family: $input-font;
+  color: $--color;
+  margin-left: 8px;
+  letter-spacing: 0.8px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $--blue;
+  }
+
+  &::placeholder {
+    color: rgb(142, 137, 137);
+  }
+}
+
+// checkbox
+.checkbox {
+  // style
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 1px solid #eaeaef;
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 10px;
+
+  &:checked {
+    background: $--blue;
+    border: 1px solid $--blue;
+  }
+
+  &:checked::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  // checkmark
+  &::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:checked::after {
+    opacity: 1;
+  }
+
+  // checkmark animation
+  &::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  // check inside the box  animation when checked
+  &:checked::after {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    border: 1px solid $--blue;
+  }
+
+  &:checked:hover {
+    border: 1px solid $--blue;
+  }
+}
+
+.brands__table {
+  width: 95%;
+  margin: 0 20px 0 34px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: $--border-side;
+    margin-top: 10px;
+
+    th {
+      font-size: $--font-size;
+      font-weight: 500;
+      color: $--color;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: 1px solid #e1e8ed;
+      border-right: $--border-side;
+      padding-left: 20px;
+
+      &:first-child {
+        width: 5%;
+      }
+
+      &:nth-child(2) {
+        width: 15%;
+      }
+
+      &:nth-child(4) {
+        width: 12%;
+      }
+      &:last-child {
+        width: 30%;
+      }
+    }
+
+    td {
+      font-size: $--font-size;
+      color: $--color;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: $--border-side;
+      border-right: $--border-side;
+      padding-left: 20px;
+      height: 110px;
+    }
+
+    tr {
+      //1st row
+      &:first-child,
+      &:nth-child(4),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:last-child {
+        td {
+          height: 15px !important;
+        }
+      }
+
+      &:hover {
+        background-color: rgb(243, 246, 249);
+      }
+    }
+
+    .table__icon {
+      color: $--icon;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $--icon-hover;
+      }
+    }
+
+    .brands__table__edit__btn,
+    .brands__table__delete__btn,
+    .brands__table__save__btn,
+    .brands__table__copy__btn {
+      border: none;
+      background-color: transparent;
+      position: relative;
+      top: 2px;
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      border-radius: $--radius;
+      margin-left: 12px;
+
+      &:hover,
+      &.active {
+        background-color: $--green;
+
+        .delete__icon,
+        .edit__icon,
+        .save__icon,
+        .copy__icon {
+          color: $--white;
+        }
+      }
+
+      .edit__icon,
+      .delete__icon,
+      .save__icon,
+      .copy__icon {
+        color: $--color;
+        cursor: pointer;
+
+        &:hover {
+          color: $--white;
+        }
+      }
+    }
+  }
+
+  .status__btn {
+    background-color: $--active;
+    color: $--active-text;
+    border: none;
+    border-radius: $--radius;
+    font-size: $--font-size;
+    height: 24px;
+    width: 80px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: $input-font;
+  }
+}
+
+.brands__order__field {
+  width: 84%;
+  height: 36px;
+  margin: auto;
+  border: 1px solid #eaeaef;
+  border-radius: $--radius;
+  font-size: $--font-size;
+  font-family: $input-font;
+  color: $--color;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $--blue;
+  }
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}
+
+.brands__table__delete__btn {
+  &:hover,
+  &.active {
+    background-color: $--pink !important;
+  }
+}
+
+.brands__table__save__btn {
+  &:hover,
+  &.active {
+    background-color: #393e46 !important;
+  }
+}
+
+.brands__table__copy__btn {
+  &:hover,
+  &.active {
+    background-color: #00adb5 !important;
+  }
+}

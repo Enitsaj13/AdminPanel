@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$input-font: 'Montserrat';
+$--hover: #f5f5f5;
+$--icon: #86838d;
+$--icon-hover: #454448;
+$--blue: #47b5ff;
+$--border: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+$--white: #fff;
+
+.footer__text__div {
+  color: gray;
+  transform: translateY(100%);
+  margin-left: 34px;
+}
+
+.footer__text,
+.footer__text__copyright {
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-family: $input-font;
+
+  &:hover {
+    color: $--blue;
+  }
+
+  &__copyright {
+    margin-left: 0;
+  }
+}
+
+.footer__text__copyright {
+  &:hover {
+    color: gray;
+  }
+}

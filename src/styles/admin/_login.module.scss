@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$--bg: #fff;
+$--blue: #47b5ff;
+$--anchor: #86838d;
+$--border: #e5e5e5;
+$--input-bg: #f7f6f9;
+$--input-color: #585460;
+$--blue_hover: #249ff0;
+$--anchor-hover: #7e7c84;
+$--shadow: rgba(22, 196, 244, 0.19);
+$--shadow_border: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$--title_size_login: 1.8rem;
+$--text_size_forgot: 1rem;
+$--text_size_input: 1.1rem;
+$--border-radius: 5px;
+$global-font: 'Montserrat';
+$input-font: 'Montserrat';
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 100px auto;
+  height: 500px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login__container,
+.forgot__container {
+  width: 80%;
+  z-index: 9999;
+}
+
+.forgot__container {
+  height: 540px;
+}
+
+.logo {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.login__title,
+.forgot__title {
+  margin: 40px 0;
+  color: $--anchor;
+  text-align: center;
+  font-size: $--title_size_login;
+}
+
+.text__login {
+  color: #fff;
+}
+
+.input__field__login,
+.input__field_forgot {
+  display: flex;
+  justify-content: center;
+
+  input {
+    width: 90%;
+    height: 54px;
+    margin: 10px auto;
+    padding: 0 20px;
+    border: 0px solid $--border;
+    border-radius: $--border-radius;
+    outline: none;
+    background-color: $--input-bg;
+    color: $--anchor;
+    font-family: $input-font;
+    font-size: $--text_size_input;
+  }
+
+  input::placeholder {
+    color: $--anchor;
+  }
+}
+
+.input__field__forgot {
+  display: flex;
+  justify-content: center;
+
+  input {
+    width: 90%;
+    height: 54px;
+    margin: 10px auto;
+    padding: 0 20px;
+    border: 0px solid $--border;
+    border-radius: $--border-radius;
+    outline: none;
+    background-color: $--input-bg;
+    color: $--anchor;
+    font-family: $input-font;
+    font-size: $--text_size_input;
+  }
+
+  input::placeholder {
+    color: $--anchor;
+  }
+}
+
+.remember__forgot {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 60px 0 50px;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: $--anchor;
+
+  .remember__me {
+    input {
+      margin: 0 10px;
+      font-size: 0.8rem;
+    }
+  }
+
+  .forgot__password {
+    a {
+      color: $--anchor;
+      cursor: pointer;
+    }
+    &:hover {
+      a {
+        color: $--blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.login__btn,
+.reset__btn {
+  text-align: center;
+
+  button {
+    width: 90%;
+    height: 50px;
+    margin: 40px auto;
+    padding: 0 10px;
+    border: 0px solid $--blue;
+    border-radius: $--border-radius;
+    outline: none;
+    background-color: $--blue;
+    color: $--bg;
+    font-family: $input-font;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $--blue_hover;
+  }
+}
+
+.reset__btn {
+  .reset,
+  .cancel {
+    margin: 20px 10px;
+  }
+
+  .cancel {
+    color: $--blue;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: $--blue_hover;
+      cursor: pointer;
+    }
+  }
+}
+
+.forgot__password__container {
+  z-index: 999;
+}
+
+.forgot_text {
+  p {
+    font-size: $--text_size_forgot;
+    color: $--anchor;
+    text-align: left;
+    margin: 0 0 40px 40px;
+    line-height: 1.6rem;
+  }
+}

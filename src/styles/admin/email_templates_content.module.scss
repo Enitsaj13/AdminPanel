@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$input-font: 'Montserrat';
+$--hover: #f5f5f5;
+$--icon: #86838d;
+$--icon-hover: #454448;
+$--blue: #47b5ff;
+$--blue-hover: #33abfb;
+$--white: #fff;
+$--radius: 5px;
+$--violet: #80558c;
+$--violet-hover: #6a4a7a;
+$--pink: #f65a83;
+$--pink-hover: #e84a73;
+$--green: #809a6f;
+$--green-hover: #6a7f5a;
+$--active: #abd9ff;
+$--active-text: #3a82ca;
+$--border: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+$--font-size: 13px;
+$--color: rgb(105, 100, 100);
+$--border-side: 0.5px solid #eaeaef;
+
+.email__templates__content__container {
+  width: 95%;
+  margin: 110px 20px 100px 34px;
+  height: 95vh;
+  background-color: $--white;
+  box-shadow: $--border;
+
+  .email__templates {
+    padding: 20px 0;
+
+    .email__templates__text {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $--color;
+      margin-left: 40px;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .email__templates__add__btn {
+    margin: 0 0 0 40px;
+    background-color: $--violet;
+    color: $--white;
+    border: none;
+    border-radius: $--radius;
+    font-size: $--font-size;
+    height: 38px;
+    width: 110px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 70px;
+    top: 126px;
+    font-family: $input-font;
+
+    &:hover {
+      background-color: $--violet-hover;
+    }
+
+    .add__icon {
+      position: relative;
+      top: 2px;
+      margin-right: 2px;
+    }
+  }
+}
+
+.seperator {
+  border: 0;
+  border-top: 1px solid #eaeaef;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+}
+
+.search__icon {
+  position: relative;
+  inset: 4px 0 0 5px;
+}
+
+.email__templates__search {
+  margin: 0 0 20px 25px;
+}
+
+.email__templates__search__btn {
+  background-color: $--blue;
+  color: $--white;
+  border: none;
+  border-radius: $--radius;
+  font-size: $--font-size;
+  height: 38px;
+  width: 90px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-family: $input-font;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  top: 1px;
+
+  &:hover {
+    background-color: $--blue-hover;
+  }
+}
+
+.select {
+  width: 26%;
+  height: 38px;
+  border: 1px solid #eaeaef;
+  border-radius: $--radius;
+  padding: 0 10px;
+  font-size: $--font-size;
+  font-family: $input-font;
+  color: #b9b9b9;
+  margin-left: 8px;
+  letter-spacing: 0.8px;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $--blue;
+  }
+}
+
+.email__templates__table {
+  width: 95%;
+  margin: 0 20px 0 34px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: $--border-side;
+    margin-top: 10px;
+
+    th {
+      font-size: $--font-size;
+      font-weight: 500;
+      color: $--color;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: 1px solid #e1e8ed;
+      border-right: $--border-side;
+      padding-left: 20px;
+
+      &:first-child {
+        width: 5%;
+      }
+      &:last-child {
+        width: 25%;
+      }
+    }
+
+    td {
+      font-size: $--font-size;
+      color: $--color;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: $--border-side;
+      border-right: $--border-side;
+      padding-left: 20px;
+      height: 56px;
+    }
+
+    tr {
+      &:hover {
+        background-color: rgb(243, 246, 249);
+      }
+    }
+
+    .table__icon {
+      color: $--icon;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $--icon-hover;
+      }
+    }
+
+    .email__templates__table__edit__btn {
+      border: none;
+      background-color: transparent;
+      position: relative;
+      top: 2px;
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      border-radius: $--radius;
+      margin-right: 12px;
+
+      &:hover,
+      &.active {
+        background-color: $--green;
+
+        .edit__icon {
+          color: $--white;
+        }
+      }
+
+      .edit__icon {
+        color: $--color;
+        cursor: pointer;
+
+        &:hover {
+          color: $--white;
+        }
+      }
+    }
+  }
+
+  .status__btn {
+    background-color: $--active;
+    color: $--active-text;
+    border: none;
+    border-radius: $--radius;
+    font-size: $--font-size;
+    height: 24px;
+    width: 70px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: $input-font;
+  }
+}
