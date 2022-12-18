@@ -29,43 +29,41 @@ import { useState } from 'react'
 const Menu = () => {
   const [activeSubMenu, setActiveSubMenu] = useState(false)
 
-  return (
-    <>
-      <div className={styles.menu}>
-        <ul>
-          {MenuList.map((item, index) => (
-            <li key={index}>
-              <Link href={item.link}>
-                <div className={styles.menu_container}>
-                  <a>
-                    <span className={styles.icon}>{item.icon}</span>
-                    <span className={styles.menu__title}>{item.title}</span>
-                    {item.arrow && (
-                      <span className={styles.arrow}>{item.arrow}</span>
-                    )}
-                  </a>
-
-                  {item.subMenu && (
-                    <div className={styles.sub_menu}>
-                      {item.subMenu.map((subItem, index) => (
-                        <Link href={subItem.link} key={index}>
-                          <a>
-                            <span className={styles.menu__title}>
-                              {subItem.title}
-                            </span>
-                          </a>
-                        </Link>
-                      ))}
-                    </div>
+  return <>
+    <div className={styles.menu}>
+      <ul>
+        {MenuList.map((item, index) => (
+          <li key={index}>
+            <Link href={item.link} legacyBehavior>
+              <div className={styles.menu_container}>
+                <a>
+                  <span className={styles.icon}>{item.icon}</span>
+                  <span className={styles.menu__title}>{item.title}</span>
+                  {item.arrow && (
+                    <span className={styles.arrow}>{item.arrow}</span>
                   )}
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
-  )
+                </a>
+
+                {item.subMenu && (
+                  <div className={styles.sub_menu}>
+                    {item.subMenu.map((subItem, index) => (
+                      (<Link href={subItem.link} key={index}>
+
+                        <span className={styles.menu__title}>
+                          {subItem.title}
+                        </span>
+
+                      </Link>)
+                    ))}
+                  </div>
+                )}
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </>;
 }
 
 const MenuList = [

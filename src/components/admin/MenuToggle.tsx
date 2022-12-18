@@ -100,23 +100,21 @@ const MenuToggleList = [
 ];
 
 const Menu = () => {
-  return (
-    <>
-      <div className={styles.menu__toggle}>
-        <ul>
-          {MenuToggleList.map((item, index) => (
-            <li key={index}>
-              <div className={styles.menu__toggle__div}>
-                <Link href={item.link}>
-                  <span className={styles.icon}>{item.icon}</span>
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
-  );
+  return <>
+    <div className={styles.menu__toggle}>
+      <ul>
+        {MenuToggleList.map((item, index) => (
+          <li key={index}>
+            <div className={styles.menu__toggle__div}>
+              <Link href={item.link} legacyBehavior>
+                <span className={styles.icon}>{item.icon}</span>
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </>;
 };
 
 export default Menu;

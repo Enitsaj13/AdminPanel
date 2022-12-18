@@ -8,12 +8,12 @@ const Footer = () => {
         <span className={styles.footer__text__copyright}>
           {new Date().getFullYear()} &copy;
         </span>
-        <Link href='https://salemydevice.com/'>
+        <Link href='https://salemydevice.com/' legacyBehavior>
           <strong className={styles.footer__text}>SaleMyDevice.com</strong>
         </Link>
       </div>
     </footer>
-  )
+  );
 }
 
 export default Footer

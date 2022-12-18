@@ -43,7 +43,7 @@ const LoginForm = () => {
           </div>
         </div>
         <div className={styles.login__btn}>
-          <Link href='/admin/dashboard'>
+          <Link href='/admin/dashboard' legacyBehavior>
             <button type='submit'>
               <a className={styles.text__login}>Login</a>
             </button>

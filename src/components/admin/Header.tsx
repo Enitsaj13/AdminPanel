@@ -22,7 +22,7 @@ const Header = ({ style }: HeaderProps) => {
         </button>
 
         <div className={styles.profile__container}>
-          <Link href='/admin/profile'>
+          <Link href='/admin/profile' legacyBehavior>
             <Image
               src={profile}
               alt='profile'
@@ -34,7 +34,7 @@ const Header = ({ style }: HeaderProps) => {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
 export default Header

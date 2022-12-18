@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styles from '@/styles/admin/_login.module.scss'
 import LoginForm from '@/components/admin/LoginForm'
 import backgroundImage from '@/images/admin_images/bg_login.jpg'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import ForgotPassword from '@/components/admin/ForgotPassword'
 
 import { useAppSelector } from '@/rtk/hook'
